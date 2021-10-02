@@ -1,0 +1,12 @@
+<div class="container">
+  <h1><%= @article.title %></h1>
+  <div class="description">
+    <p><%= @article.content %></p>
+    <button type="button" class="btn btn-primary">
+     <%= link_to "Edit article", edit_article_path %>
+    </button>
+    <%= link_to '🗑️', article_path(@article), method: :delete %>
+  </div>
+</div>
+<br>
+<%= link_to "Back to all articles", articles_path %>
